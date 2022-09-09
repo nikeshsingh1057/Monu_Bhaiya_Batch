@@ -3,7 +3,7 @@
 public class fibo {
     public static void main(String[] args) {
 
-        int a=0,b=1,c=0;
+        int a=1,b=0,c=0;
         int n=14;
 
         for(int i=0;i<n;i++)
