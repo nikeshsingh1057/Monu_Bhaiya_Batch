@@ -38,9 +38,6 @@ class Solution {
 class Solution {
     public int canCompleteCircuit(int[] petrol, int[] dis) {
         
-         
-        Deque<Integer> d=new LinkedList<>();
-
         int curr=0;
         int count=0,c=0;
         int i=0;
