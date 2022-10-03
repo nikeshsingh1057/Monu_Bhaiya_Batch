@@ -1,5 +1,5 @@
-// product of array
-
+// Product of Array Except Self
+// method 1st .
 import java.util.Arrays;
 
 public class leetcode238 {
@@ -35,4 +35,42 @@ public class leetcode238 {
 		}
 		return arr;
 	}
+}
+
+// method 2nd using division operator
+
+class Solution {
+    public int[] productExceptSelf(int[] arr) {
+      
+        int nums[]=new int[arr.length];
+        int product=1;
+        int zero=0;
+        int index_zero=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]==0)
+            {
+                zero++;
+                index_zero=i;
+            }
+            
+            if(arr[i]!=0)
+                product*=arr[i];
+            
+        }
+        if(zero>=2)
+        {
+            return nums;
+        }
+        else if(zero==1)
+        {
+            nums[index_zero]=product;
+            return nums;
+        }
+        for(int i=0;i<arr.length;i++)
+        {
+            nums[i]=product/arr[i];
+        }
+        return nums;
+    }
 }
