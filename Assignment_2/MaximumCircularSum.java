@@ -18,7 +18,7 @@ public class Main {
             
             for(int i=0;i<n;i++)
             {
-                int start=(i+1)%n;
+                int start=(i+1)%n;  //we do not do directly (start = i ) because we have to start circular form i+1 and to avoid last element out of index we do this. 
                 int sum=arr[i];
                 ans=Math.max(ans,sum);
                 
