@@ -12,10 +12,10 @@ public class Solution extends VersionControl {
 			int mid=low+(high-low)/2;
 			
 			if(isBadVersion(mid)==true)
-            {
-                ans=mid;
-                high=mid-1;   
-            }
+            		{
+                		ans=mid;
+                		high=mid-1;   
+            		}
 			else
 				low=mid+1;
 		}
