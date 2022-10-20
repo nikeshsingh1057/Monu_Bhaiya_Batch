@@ -15,7 +15,7 @@ class Solution {
         
         // reverse of matrix according to row wise.
         for(int i=0;i<arr.length;i++)
-            Reverse(arr[i]);  // 1st row ka address bhej rahe hai
+            Reverse(arr[i]);  // 1st row ka address bhej rahe hai or we can say reference pass kar rahe hai.
 
     }
     public static void Reverse(int [] arr)
