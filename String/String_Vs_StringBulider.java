@@ -1,4 +1,4 @@
-// comare string builder and normal stirng.
+// compare string builder and normal stirng.
 
 public class String_Vs_StringBulider {
 
