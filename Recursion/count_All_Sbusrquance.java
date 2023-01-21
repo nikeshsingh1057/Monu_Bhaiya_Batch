@@ -14,6 +14,7 @@ public class count_All_Sbusrquance {
 
 		if(str.length()==0)
 		{
+			System.out.print(ans+" ");
 			return 1;
 		}
 		char ch=str.charAt(0);
