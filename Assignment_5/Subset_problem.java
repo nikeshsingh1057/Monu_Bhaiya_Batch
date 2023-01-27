@@ -1,3 +1,5 @@
+// just like generate all subsequance of string type question here we also generate all subsequance of array and check.
+
 import java.util.*;
 public class Main {
     public static int count;
