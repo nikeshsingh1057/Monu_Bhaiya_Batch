@@ -12,7 +12,7 @@ public class subset_2 {
 		 List<List<Integer>> ans = new ArrayList<>();
 	     List<Integer> ll= new ArrayList<>();
 	      
-	     int nums[]= {1,2,2};
+	     int nums[]= {1,2,2.4};
 	      Arrays.sort(nums);
 	        
 	     Subset_2(nums,0,ans,ll);
