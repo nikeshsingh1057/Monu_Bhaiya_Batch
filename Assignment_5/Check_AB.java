@@ -8,6 +8,7 @@ public class Main {
         System.out.println(check(str));
 
     }
+    // method 1st.
     public static boolean check(String str)
     {
         if(str.length()==0)
@@ -23,5 +24,23 @@ public class Main {
         }
         
         return false;
-    }  
+    }
+    // method 2
+    public static boolean check(String str)
+    {
+        if(str.length()==0)
+            return true;
+
+        if(str.charAt(0)=='a'){
+           
+            return check(str.substring(1));
+        }
+
+        else if(str.length()>1 && str.charAt(0)=='b'&& str.charAt(1)=='b'){
+            
+            return check(str.substring(2));
+        }
+        else
+            return false;
+    }
 }
