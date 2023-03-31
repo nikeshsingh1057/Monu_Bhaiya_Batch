@@ -16,16 +16,16 @@ public class keypadcombination {
 	// method 1st 
 	public static void PrintKey(String str,int idx, String combination)
 	{
-		if(str.length()==0)
+		if(str.length()==idx)
 		{
 			System.out.print(combination+" ");
 			return ;
 		}
-		char curr=str.charAt(0);
+		char curr=str.charAt(idx);
 		String map=keypad[curr-'0'];
 		
 		for(int i=0;i<map.length();i++)
-			PrintKey(str.substring(1),idx, combination+map.charAt(i));
+			PrintKey(str,idx+1, combination+map.charAt(i));
 	}
 	// method 2 sir wala.
 	public static void PrintKeyCombination(String str,String combination)
