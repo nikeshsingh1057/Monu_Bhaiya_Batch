@@ -1,12 +1,17 @@
-// implementation of linked list.
+package LinkedLIst;
 
 public class Implement_LindedList {
 	
-	 public class Node{
+	class Node{
 		
 		int val;
 		Node next;
 		
+		/*Node(int x)
+		{
+		   this.data=x;         // agar hum aise karte hai to hume  har function jaise AddFirst me new Node() ke ander item pass karna hoga 
+		   this.next=null;     // i.e Node nn=new Node(item); and agar isko hata dete hai to direct --> Node nn=new Node(); likhana hoga 
+		}*/                    // and value set karna ke liye nn.val=item karna hoga.
 	}
 	
 	private Node head;
