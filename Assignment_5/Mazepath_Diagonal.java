@@ -33,3 +33,7 @@ public class Main {
         return a;
     }  
 }
+
+
+// in case we have to move only with original diaogonal i.e not form other diagonal the in case we do
+// last if case  with if(sr<dr && sc<dc && sr==dr) 
