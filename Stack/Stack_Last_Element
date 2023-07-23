@@ -1,0 +1,84 @@
+package Stack;
+
+import java.util.Stack;
+
+public class Stack_Last_Element {
+	
+public static void main(String[] args) {
+		
+		Stack<Integer> st=new Stack<>();
+		
+		st.push(1);
+		st.push(2);
+		st.push(3);
+		st.push(4);
+		st.push(5);
+		
+		System.out.println(st);
+		
+		int last=LastElement(st);
+		System.out.println(last);
+		
+		Last_Element(st,45);
+		System.out.println(st);
+		
+		Reverse(st);
+		System.out.println(st);
+		
+		int x=st.size();
+		System.out.println(x);
+	}
+// function to print last element of stack without removing element of stack.
+	public static int LastElement(Stack<Integer> st) {
+		
+		if(st.size()==1) {
+			
+			return st.peek();
+		}
+		
+		int item=st.pop();
+		int x=LastElement(st);
+		st.push(item);
+		return x;
+	}
+// function to add last element i.e(sabse pahala element jab stack khali ho) in stack without modify it.
+	public static void Last_Element(Stack<Integer> st,int ele) {
+		
+		if(st.isEmpty()) {
+			
+			st.push(ele);
+			return;
+		}
+		
+		int item=st.pop();
+		
+		Last_Element(st,ele);
+		
+		st.push(item);
+	}
+	
+// function to  reverse statck element without using extra space 
+	public static void Reverse(Stack<Integer> st) {
+		
+		if(st.isEmpty()) {
+			return;
+		}
+		
+		int item=st.pop();
+		Reverse(st);
+		Insert_Down(st,item);       // stack ke case me reverse karne ke liye push down karna padega i.e Insert_Down karna padega.
+		// but in case of queue no need to make extra function ye directly eak function se ho jayega.
+	}
+	public static void Insert_Down(Stack<Integer> st,int item)    // reverse kar ke last me add kar rahe hai,
+	{
+		if(st.isEmpty()) {
+			
+			st.push(item);
+			return;
+		}
+		
+		int ele=st.pop();
+		Insert_Down(st,item);
+		st.push(ele);
+	}
+}
