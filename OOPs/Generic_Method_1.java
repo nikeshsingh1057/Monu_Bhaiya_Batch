@@ -1,3 +1,4 @@
+// type one with singel argument
 class Main
 {
   public static void main (String[] args)
@@ -15,4 +16,20 @@ class Main
             System.out.print(i+" ");
   } 
 }
+
+// type 2 with two argument.
+
+class Demo
+{
+  static <V, T> void display (V v, T t)
+  {
+    System.out.println(v.getClass().getName()+" = " +v);           // java.lang.Integer = 88
+    System.out.println(t.getClass().getName()+" = " +t);           // java.lang.String = This is string
+  }
+  public static void main(String[] args)
+  {
+    display(88,"This is string");
+  }
+}
+
   
