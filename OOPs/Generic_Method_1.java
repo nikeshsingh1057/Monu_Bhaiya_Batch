@@ -32,4 +32,79 @@ class Demo
   }
 }
 
-  
+// generic method with return type
+// 1st type.
+public class Main
+{
+	public static void main(String[] args) {
+		
+	      Integer arr[]={4,5,3,5,2,1,54,6};
+	      System.out.print(show(arr));
+	}
+	public static <T> int show(T [] arr){          // yaha hum int , boolean kuch bee return karwa sakte hai.
+	    
+	    for(T i: arr){
+	        
+	        System.out.print(i+" ");
+	    }
+	    System.out.println();
+	    return 9;
+	}
+}
+
+// 2nd way
+public class GenericMethodExample {
+
+    // Generic method with a return type
+    public static <T> T someGenericMethod() {
+        // Implementation of the generic method
+        // This example returns a String for demonstration purposes
+        return (T) "Hello, World!";
+    }
+
+    public static void main(String[] args) {
+        // Assign the result of the generic method to a variable
+        Object result = someGenericMethod();
+
+        // Check the type of the result using instanceof
+        if (result instanceof String) {
+            String stringValue = (String) result;
+            System.out.println("Result is a String: " + stringValue);
+        } else if (result instanceof Integer) {
+            Integer intValue = (Integer) result;
+            System.out.println("Result is an Integer: " + intValue);
+        } else {
+            System.out.println("Result is of an unknown type");
+        }
+    }
+}
+
+// 3rd type 
+
+public class GenericMethodExample {
+
+    // Generic method to count elements divisible by 2
+    public static <T extends Number> int countEvenNumbers(T[] arr) {
+        int count = 0;
+
+        for (T element : arr) {
+            double value = element.doubleValue(); // Convert to double for numeric comparison
+            if (value % 2 == 0) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+        Integer[] intArray = { 1, 2, 3, 4, 5, 6 };
+        Double[] doubleArray = { 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 };
+
+        int evenCountInt = countEvenNumbers(intArray);
+        int evenCountDouble = countEvenNumbers(doubleArray);
+
+        System.out.println("Number of even integers: " + evenCountInt);
+        System.out.println("Number of even doubles: " + evenCountDouble);
+    }
+}
