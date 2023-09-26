@@ -69,8 +69,8 @@ class Main implements In1 {
         /* Now If we do like " In1 t=new Main(); " agar iss tarh se object banate hai to 't' ke dwara sirf interface
            ke method ko call karewa sakte hai play ko nahi because play method is not present in In1 (interface).  */
          
-        In1 t=new Main();
-        t.display();       // this will work fine
-        t.Main();          // this will give error (cannot find symbol).
+            In1 t=new Main();
+            t.display();       // this will work fine
+            t.Main();          // this will give error (cannot find symbol).
 	}
 }
