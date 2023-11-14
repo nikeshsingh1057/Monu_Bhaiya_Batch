@@ -34,3 +34,5 @@ public class Counting_Sort {
 // first step me array se maximum nikal lenge
 // then commulative sum nikalenge
 // uske badd commulative sum jitna new array banayenge and uske badd  original array ko piche se travesh karenge 
+
+// qestion based on counting sort- https://leetcode.com/problems/sort-vowels-in-a-string/
