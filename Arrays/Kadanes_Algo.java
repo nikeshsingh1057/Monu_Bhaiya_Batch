@@ -18,9 +18,9 @@ public class Kadanes_Algo {
     		{
 			 sum += arr[i];
 			 ans = Math.max(ans, sum);
-			 if (sum < 0) 
+			if (sum < 0) 
        			{
-				  sum = 0;
+				sum = 0;
 			}
 		}
 		 return ans;
@@ -28,3 +28,6 @@ public class Kadanes_Algo {
 	 }
 
 }
+
+/* question based on kadhan's algo */
+//1.   https://codeforces.com/contest/1899/problem/C
