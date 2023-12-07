@@ -43,9 +43,9 @@ public class Main {
 				time=time+(arr[i]*j);
 				j++;
 			}
+			if(pratha>=p)
+				return true;
 		}
-		if(pratha>=p)
-			return true;
 		return false;
 	}
 }
