@@ -40,7 +40,7 @@ public class Main{
  		String str="";
  		
  		for (int i=0; i<100000; i++){  
- 			str+="car";
+ 			str+="Tpoint";
  		}  
  		System.out.println("Time taken by String: " + 	(System.currentTimeMillis() - startTime) + "ms"); 
  		
@@ -56,5 +56,5 @@ public class Main{
  	}  
 }  
 
-//Time taken by String: 1293ms
-//Time taken by StringBuilder: 4ms
+// Time taken by String: 1293ms
+// Time taken by StringBuilder: 4ms
