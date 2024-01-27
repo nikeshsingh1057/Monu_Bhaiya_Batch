@@ -44,3 +44,13 @@ public class Main
 	 	//        m.bus2();
 	}
 }
+                                      // rules of static method
+/*
+
+1. static methods belongs to the class not to the object
+2. a static method can be acessed directly by class namne and does not need any object
+3. a static method can access only static data. It cannot access non - static data (instance data).
+4. a static method can call only other static methods and cannot call a non static method.
+5. a static method cannot refer to "this" or "super" keyword  in anyway.
+
+*/
