@@ -38,7 +38,7 @@ public class Main {
             return;
         }
 
-        if(f==true)
+        if(f==true)   // iss line se only eak path milega agar isko hata diye to sara path mil jayega
             return;
 
         if(cr<0 || cc<0 || cr>=maze.length || cc>=maze[0].length || maze[cr][cc]=='X'){
