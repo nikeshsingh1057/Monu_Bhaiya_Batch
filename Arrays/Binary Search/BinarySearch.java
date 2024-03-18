@@ -29,3 +29,17 @@ public class BinarySearch {
 		return -1;
 	}
 } 
+
+// binary search in infinite array
+
+int low =0;
+int high=1; 
+int target=10000;
+while(arr[high]<target){   // ye while loop range pata kar ke de dega ki target element infinite array kis range ke ander present hai uske bad hum niche binary search laga sakte hai.
+	low=high;
+	high=2*high;     // exponintial growth ho raha hai.
+}
+return BinarySearch(arr,low,high);        
+
+// t.c -> log(n)
+	
