@@ -30,7 +30,7 @@ public class BinarySearch {
 	}
 } 
 
-// binary search in infinite array
+// binary search in infinite array  //t.c lon(n)
 
 int low =0;
 int high=1; 
@@ -41,5 +41,44 @@ while(arr[high]<target){   // ye while loop range pata kar ke de dega ki target 
 }
 return BinarySearch(arr,low,high);        
 
-// t.c -> log(n)
+
 	
+//  binary search ceil 
+
+    static int findFloor(long arr[], int n, long x)
+    {
+        int low = 0, high = n-1;
+        while(low<=high){
+            
+            int mid=low+(high-low)/2;
+            if(arr[mid]==x)
+                return mid;
+            
+            if(x<arr[mid]) 
+                high=mid-1;
+                
+            else
+                low=mid+1;
+        }
+        return high;
+    }
+
+// binary search ceil
+
+    static int findFloor(long arr[], int n, long x)
+    {
+        int low = 0, high = n-1;
+        while(low<=high){
+            
+            int mid=low+(high-low)/2;
+            if(arr[mid]==x)
+                return mid;
+            
+            if(x<arr[mid]) 
+                high=mid-1;
+                
+            else
+                low=mid+1;
+        }
+        return low;
+    }
