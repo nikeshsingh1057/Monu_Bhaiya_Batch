@@ -43,7 +43,7 @@ return BinarySearch(arr,low,high);
 
 
 	
-//  binary search ceil 
+//  binary search floor (just smaller or equal to target element)
 
     static int findFloor(long arr[], int n, long x)
     {
@@ -63,7 +63,7 @@ return BinarySearch(arr,low,high);
         return high;
     }
 
-// binary search ceil
+// binary search ceil ( just greater or equal to target element)
 
     static int findFloor(long arr[], int n, long x)
     {
