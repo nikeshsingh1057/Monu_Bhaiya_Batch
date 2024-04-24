@@ -16,45 +16,42 @@ public class NextGreaterElement {
 		
 		for(int i=0;i<arr.length;i++)
 		{
-			while(!st.isEmpty() && arr[i]>arr[st.peek()]) {
-				
+			while(!st.isEmpty() && arr[i]>arr[st.peek()]) 
 				ans[st.pop()]=arr[i];
-			}
 			st.push(i);
 		}
 		
-		for(int i=0;i<ans.length;i++)
-		{
+		for(int i=0;i<ans.length;i++){
 			if(ans[i]==0)
-				ans[i]=-1;
+			    ans[i]=-1;
 		}
-		
 		System.out.println(Arrays.toString(ans)); 
-		
-		// another method to find next grater element    (efficient approch than above approch).
-		
-		/*for(int i=arr.length-1;i>=0;i--)           // 4,12,5,3,1,2,15,3,1,2,4,6
-		{
-			if(!st.isEmpty() && arr[i]<arr[st.peek()]) {        // it will handle qucickly testcase like 3<4 etc.
-				ans[i]=arr[st.peek()];
-			}
-			else
-			{
-				while(!st.isEmpty() && arr[i]>=arr[st.peek()]) {
-					st.pop();
-				}
-				
-				if(!st.isEmpty())
-					ans[i]=arr[st.peek()];
-				else
-					ans[i]=-1;
-			}
-			st.push(i);
-		}
-		
-		System.out.println(Arrays.toString(ans));
-
-
+	}
+	
+// method 2nd (right se travesh karna).
+class Solution
+{
+    //Function to find the next greater element for each element of the array.
+    public static long[] nextLargerElement(long[] arr, int n)
+    { 
+        long ans[]=new long[n];
+        Stack<Integer> st=new Stack<>();
+        
+        for(int i=n-1;i>=0;i--){
+            
+            while(!st.isEmpty() && arr[i]>=arr[st.peek()])
+                st.pop();
+            
+            if(!st.isEmpty())
+                ans[i]=arr[st.peek()];
+            else
+                ans[i]=-1;
+            st.push(i);
+        }
+        return ans;
+    } 
+}
+	
 //---------------------------------------------------------------------------------------------------------------------------------------	
 // also valid to find next greater element if array is given circular..		
 // method third to find next greater element.(this is valid for both circular array. just make it with i%arr.length and run it by 2*n
@@ -83,7 +80,7 @@ public class NextGreaterElement {
 	
 }
 
-// another method
+// next greater in circular array (just remove 2*n and run loop to n and also remove all % (mod) then it is valid for no circular array).
 
 class Solution { // own
     // t.c-> 2*n+2*m
