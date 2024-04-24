@@ -20,3 +20,6 @@ class Solution {
 	} 
     }
 }
+
+// question based on next smaller in array.
+// Leetcode 1063   https://leetcode.ca/all/1063.html
