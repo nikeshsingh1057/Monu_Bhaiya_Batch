@@ -1,9 +1,9 @@
 
 class Solution {
-	public static int[] help_classmate(int arr[], int n) 
-	{ 
-	    int ans[]=new int[n];
-            Stack<Integer> st=new Stack<>();
+    public static int[] help_classmate(int arr[], int n) 
+    { 
+	int ans[]=new int[n];
+        Stack<Integer> st=new Stack<>();
         
         for(int i=n-1;i>=0;i--){
             
@@ -18,4 +18,5 @@ class Solution {
         }
         return ans;
 	} 
+    }
 }
