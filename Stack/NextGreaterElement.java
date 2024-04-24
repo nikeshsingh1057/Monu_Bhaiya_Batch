@@ -14,7 +14,7 @@ public class NextGreaterElement {
 		
 		// method 1st monu sir wala.
 		
-		/*for(int i=0;i<arr.length;i++)
+		for(int i=0;i<arr.length;i++)
 		{
 			while(!st.isEmpty() && arr[i]>arr[st.peek()]) {
 				
@@ -29,7 +29,7 @@ public class NextGreaterElement {
 				ans[i]=-1;
 		}
 		
-		System.out.println(Arrays.toString(ans)); */
+		System.out.println(Arrays.toString(ans)); 
 		
 		// another method to find next grater element    (efficient approch than above approch).
 		
@@ -52,8 +52,10 @@ public class NextGreaterElement {
 			st.push(i);
 		}
 		
-		System.out.println(Arrays.toString(ans));*/
-		
+		System.out.println(Arrays.toString(ans));
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------	
 // also valid to find next greater element if array is given circular..		
 // method third to find next greater element.(this is valid for both circular array. just make it with i%arr.length and run it by 2*n
 		
@@ -79,4 +81,32 @@ public class NextGreaterElement {
 		
 	}
 	
+}
+
+// another method
+
+class Solution { // own
+    // t.c-> 2*n+2*m
+    public int[] nextGreaterElements(int[] arr) {
+        
+        int n=arr.length;
+        int ans[]=new int[n];
+        Arrays.fill(ans,-1);
+
+        Stack<Integer> st=new Stack<>();
+
+        for(int i=0;i<2*n;i++){
+            
+            while(!st.isEmpty() && arr[st.peek()%n] < arr[i%n]){
+                if(i%n<n)
+                    ans[st.pop()%n]=arr[i%n];
+                
+            }
+            st.push(i%n);
+        }
+        for(int i=0;i<n;i++)
+            if(ans[i]==-1) 
+                ans[i]=-1;
+        return ans;
+    }
 }
