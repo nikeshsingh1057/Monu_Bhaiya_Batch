@@ -8,5 +8,61 @@
 // https://leetcode.com/problems/word-break/
 
 //1091. Shortest Path in Binary Matrix
-//https://leetcode.com/problems/shortest-path-in-binary-matrix/
+//https://leetcode.com/problems/shortest-path-in-binary-matrix/    (using dfs tle dega do we have to do it with bfs).
+
+// same question hai but 1091 me eight dirction me travel kar sakte hai but here 4 direction me travel kar sakte hai so uske according code likeh hai.
+
+import java.util.*;
+public class Main
+{
+    static int[] x = {0,1,0,-1};
+    static int[] y = {1,0,-1,0}; 
+    
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int m=sc.nextInt();
+		int arr[][]=new int[n][m];
+		
+		for(int i=0;i<n;i++){
+		    for(int j=0;j<m;j++){
+		        arr[i][j]=sc.nextInt();
+		    }
+		}
+		int xr=sc.nextInt();
+		int xy=sc.nextInt();
+		
+		int ans=shortestPathBinaryMatrix(arr,xr,xy);
+        System.out.println(ans);
+	}
+    // bruteforce approach 
+    public static int shortestPathBinaryMatrix(int[][] grid,int xr,int xy) {
+        
+       int path = dfs(grid, 0, 0 ,xr,xy);
+       return path==800000?-1:path;
+    }
+    
+    public static int dfs(int[][] grid, int i, int j, int xr,int xy){
+        
+        int n=grid.length;
+        int m=grid[0].length;
+        
+        if(i<0 || i>=n || j<0 || j>=m || grid[i][j]==0)
+            return 800000;
+      
+        if(i==xr-1 && j==xy-1)
+            return 1;
+        
+        grid[i][j] = 0;    
+        int path=800000;
+        
+        for(int k=0;k<4;k++)
+            path = Math.min(path,1+dfs(grid, i+y[k], j+x[k],xr,xy));
+        
+        grid[i][j] = 1;     
+        return path;
+    }
+}
+*/
 
