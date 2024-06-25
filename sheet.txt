@@ -14,3 +14,6 @@ https://docs.google.com/spreadsheets/d/1ZMk8E4WbMtrINzUVWqq1LOhUMc11ZAHStn8s7FCO
 company wise_Coding_Blocks
 
 https://docs.google.com/spreadsheets/d/1jcHJGKwxD4-ikBb3O_04zCYugG6eMgmmJchLozntnM0/edit#gid=912309933
+
+//LeetCode tipic wise link
+https://leetcode.com/discuss/interview-question/5366542/all-leetcode-articles-on-coding-patterns-summarized-in-one-page
