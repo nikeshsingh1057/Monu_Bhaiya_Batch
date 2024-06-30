@@ -6,7 +6,7 @@ public class Main
 	public static void main(String[] args) {
 		
 		// checked exception or compiled time exception.
-		FileInputStream fis = new FileInputStream("F:/abc.txt");
+		FileInputStream fis = new FileInputStream("F:/abc.txt"); 
 		
      // o/p when try to compile: unreported exception FileNotFoundException; must be caught or declared to be thrown
         
