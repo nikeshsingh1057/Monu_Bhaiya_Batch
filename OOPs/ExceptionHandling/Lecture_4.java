@@ -16,6 +16,7 @@ public class Main
 		    e.printStackTrace(); // 1st way -> ye best tarika hai Exception print karne ka.
 		    System.out.println(e); // 2nd way
 		    System.out.println(e.toString()); // 3rd way   (2nd and 3rd same output dega.)
+		    System.out.println(e.getMessage()); // 4th way
 		}
 	}
 }
